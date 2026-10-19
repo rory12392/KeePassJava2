@@ -97,7 +97,8 @@ public class Encryption {
      */
     public enum KeyDerivationFunction implements org.linguafranca.pwdb.security.KeyDerivationFunction {
         AES(Aes.getInstance()),
-        ARGON2(Argon2.getInstance());
+        ARGON2(Argon2.getInstance()),
+        ARGON2ID(Argon2.getArgon2idInstance());
 
         private final org.linguafranca.pwdb.security.KeyDerivationFunction kdf;
 

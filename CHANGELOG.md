@@ -5,6 +5,7 @@ Trying to follow the suggestions at [Keep a Change Log](http://keepachangelog.co
 # [2.2.7] Unreleased
 
 - [Issue 108] Tests that write to `testOutput` create it first (`TestUtil.testOutputPath` in the `util` module), so they pass in any order and when run on their own; this completes the fix in [PR 85] for issue 83, which did it only for `QuickStart`
+- KDBX 4 files using Argon2id for key derivation can be loaded and saved: new `Encryption.KeyDerivationFunction.ARGON2ID` (`Argon2.getArgon2idInstance()`), alongside `ARGON2`, which is Argon2d. Until now loading such a file, e.g. one created by KeePass or KeePassXC with Argon2id selected, failed with `IllegalArgumentException: Unknown Cipher UUID`
 
 # [2.2.6] 2026-10-03
 
